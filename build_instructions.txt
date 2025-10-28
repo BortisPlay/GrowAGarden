@@ -1,0 +1,22 @@
+Сборка APK (подробно)
+---------------------
+Требуется: Java JDK, Android SDK (Android Studio), Node.js, Cordova CLI
+
+1) Установи Java JDK 11+ и Android Studio (включая SDK и platform-tools).
+2) Установи Node.js (https://nodejs.org/) и Cordova: `npm install -g cordova`
+3) Создай проект Cordova:
+   cordova create growapp com.yourname.growagarden "Grow a Garden"
+4) Скопируй файлы из архива в growapp/www и замените config.xml
+5) В терминале:
+   cd growapp
+   cordova platform add android
+   cordova requirements    # проверит окружение
+   cordova build android --release
+6) Подпиши APK:
+   jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore my-release-key.jks platforms/android/app/build/outputs/apk/release/app-release-unsigned.apk alias_name
+   zipalign -v 4 app-release-unsigned.apk GrowGarden.apk
+   apksigner sign --ks my-release-key.jks --out GrowGarden-signed.apk GrowGarden.apk
+
+Или используй Android Studio: открой platforms/android и собери из IDE.
+
+Примечание: Для теста на телефоне можно использовать `cordova run android --device` при подключенном устройстве с включённой отладкой по USB.

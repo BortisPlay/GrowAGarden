@@ -1,0 +1,8 @@
+{
+  "name": "Grow a Garden - Demo",
+  "short_name": "GrowGarden",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#dcedc1",
+  "theme_color": "#8BC34A"
+}

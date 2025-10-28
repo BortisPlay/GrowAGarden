@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<widget id="com.example.growagarden" version="0.1.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  <name>Grow a Garden</name>
+  <description>Demo garden simulator - Cordova wrapper</description>
+  <author email="you@example.com" href="#">Your Name</author>
+  <content src="index.html" />
+  <preference name="Fullscreen" value="true" />
+  <access origin="*" />
+  <platform name="android">
+    <allow-intent href="market:*" />
+  </platform>
+</widget>

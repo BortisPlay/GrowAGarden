@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+  <title>Grow a Garden - Demo</title>
+  <link rel="manifest" href="manifest.json">
+  <style>
+    html,body { margin:0; padding:0; height:100%; background: linear-gradient(#a8e6cf, #dcedc1); }
+    #game-container { width:100%; height:100vh; display:flex; align-items:center; justify-content:center; }
+    canvas { max-width:100%; height:auto; }
+    .ui { position: absolute; top:8px; left:8px; font-family: Arial, Helvetica, sans-serif; color:#2b3a2f; }
+    button { padding:8px 12px; margin-right:8px; border-radius:8px; border:none; background:#7bd389; color:#083; font-weight:bold; }
+  </style>
+</head>
+<body>
+  <div id="game-container"></div>
+  <div class="ui">
+    <button id="plantBtn">Посадить семя</button>
+    <button id="visitBtn">Посетить случайный сад</button>
+    <span id="status"></span>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
